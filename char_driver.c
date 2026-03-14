@@ -38,7 +38,7 @@ ssize_t pcd_read(struct file *filp,char __user *buff,size_t count,loff_t *f_pos)
     copy_to_user(buff,&device_buffer[*f_pos],count);
  
     *f_pos+=count;
-    pr_info("data =%s\n",device_buffer);
+    pr_info("data is =%s\n",device_buffer);
     return 0;
 }
 ssize_t pcd_write(struct file *filp,const char __user *u_buff,size_t count,loff_t *f_pos)
@@ -59,7 +59,7 @@ if((*f_pos+count)>DEV_MEM_SIZE)
     len+=count;
     *f_pos+=count;
     pr_info("no of bytes successfully written=%zu\n",count);
-    pr_err("data =%s\n",device_buffer);
+    pr_err("data  from user =%s\n",device_buffer);
     return count;
  
 }
