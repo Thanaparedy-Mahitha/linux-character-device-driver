@@ -1,7 +1,7 @@
 
 # Change the target by swapping the obj-m line depending on the file you use.
 # For hello.c:
-obj-m +=char1.o
+obj-m +=char_driver.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 
