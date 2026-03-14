@@ -3,10 +3,8 @@
 # For hello.c:
 obj-m +=char1.o
 
-# For hello_seq.c (if you pick the seq_file version):
-# obj-m += hello_seq.o
+KDIR := /lib/modules/$(shell uname -r)/build
 
-KDIR := /home/mahitha/Kernel_soure/WSL2-Linux-Kernel-linux-msft-wsl-6.6.87.2 
 PWD  := $(shell pwd)
 
 all:
